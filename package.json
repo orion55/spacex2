@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "make-github": "react-scripts build && rd /S /Q docs && move build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
