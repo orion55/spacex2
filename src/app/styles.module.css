@@ -1,0 +1,28 @@
+.app__title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+}
+
+.app__filter {
+
+}
+
+.app__error {
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    .app__filter {
+        flex-direction: column;
+    }
+
+    .app__row {
+        width: 95%;
+        margin: 0 auto;
+    }
+}

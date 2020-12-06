@@ -17,6 +17,7 @@ export function Counter() {
   return (
     <div>
       <div className={styles.row}>
+        {/* eslint-disable-next-line react/button-has-type */}
         <button
           className={styles.button}
           aria-label="Increment value"
@@ -38,13 +39,11 @@ export function Counter() {
           className={styles.textbox}
           aria-label="Set increment amount"
           value={incrementAmount}
-          onChange={e => setIncrementAmount(e.target.value)}
+          onChange={(e) => setIncrementAmount(e.target.value)}
         />
         <button
           className={styles.button}
-          onClick={() =>
-            dispatch(incrementByAmount(Number(incrementAmount) || 0))
-          }
+          onClick={() => dispatch(incrementByAmount(Number(incrementAmount) || 0))}
         >
           Add Amount
         </button>
