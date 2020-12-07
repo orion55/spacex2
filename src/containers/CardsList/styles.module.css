@@ -1,0 +1,8 @@
+.cardslist {
+    overflow-y: auto;
+    flex: 8;
+}
+
+.cardslist__nodata {
+    color: gray;
+}

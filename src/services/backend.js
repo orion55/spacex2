@@ -12,7 +12,7 @@ class BackendService {
     });
     if (!response.ok) {
       throw new Error(
-        `Ошибка загрузки данных, HTTP status ${response.status}`,
+        `Error loading data, HTTP status ${response.status}`,
       );
     }
 

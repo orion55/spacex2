@@ -4,19 +4,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles.module.css';
 import config from '../../config/config';
 import { selectPage, set } from '../../slices/pageSlice';
-import { selectLaunches } from '../../slices/launchesSlice';
+import { getFilters } from '../../selector/cards';
 
 function Paginations() {
-  const launches = useSelector(selectLaunches);
+  const pageCards = useSelector(getFilters);
   const activePage = useSelector(selectPage);
   const [maxPages, setMaxPages] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (launches) {
-      setMaxPages(Math.ceil(launches.length / config.MAX_POSTS));
+    if (pageCards) {
+      setMaxPages(Math.ceil(pageCards.length / config.MAX_POSTS));
     }
-  }, [launches]);
+  }, [pageCards]);
 
   if (!maxPages) return null;
 

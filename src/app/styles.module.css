@@ -12,6 +12,18 @@
     margin-top: 20px;
 }
 
+.app__main {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app__header {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
 
 }
@@ -22,7 +34,13 @@
     }
 
     .app__row {
-        width: 95%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .app__main {
+        width: 80%;
+        padding: 0;
         margin: 0 auto;
     }
 }

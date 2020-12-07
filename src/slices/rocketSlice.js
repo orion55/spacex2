@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { first } from './pageSlice';
 
 export const rocketSlice = createSlice({
   name: 'rocket',
@@ -12,5 +13,10 @@ export const rocketSlice = createSlice({
 export const { set, clear } = rocketSlice.actions;
 
 export const selectRocket = (state) => state.rocket;
+
+export const setRocketId = (id) => (dispatch) => {
+  dispatch(set(id));
+  dispatch(first());
+};
 
 export default rocketSlice.reducer;

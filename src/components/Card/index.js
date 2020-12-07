@@ -1,22 +1,28 @@
 import React from 'react';
+import { CardImage } from 'react-bootstrap-icons';
 import styles from './styles.module.css';
 
-function Card() {
+function Card(props) {
+  const {
+    name, date, details, image,
+  } = props;
+
+  const getImage = () => {
+    if (image) return <img src={image} alt={name} className={styles.card__img} />;
+    return <CardImage color="gray" size={150} />;
+  };
+
   return (
     <article className={styles.card}>
       <div className={styles.card__picture}>
-        <img src="https://via.placeholder.com/150" alt="img" />
+        {getImage()}
       </div>
       <div className={styles.card__wrap}>
         <header className={styles.card__box}>
-          <h4 className={styles.card__title}>Привет мир!</h4>
-          <time className={styles.card__date}>10.12.2015</time>
+          {name && <h4 className={styles.card__title}>{name}</h4>}
+          {date && <time className={styles.card__date}>{date}</time>}
         </header>
-        <div className={styles.card__desc}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dignissimos
-          in iste, labore mollitia quaerat soluta. Accusamus aut distinctio incidunt tempora totam ullam vel?
-          Blanditiis consequuntur error magni pariatur sequi?
-        </div>
+        {details && <div className={styles.card__desc}>{details}</div>}
       </div>
     </article>
   );

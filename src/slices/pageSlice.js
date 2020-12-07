@@ -5,11 +5,12 @@ export const pageSlice = createSlice({
   initialState: 1,
   reducers: {
     set: (state, action) => action.payload,
+    first: () => 1,
     clear: () => 0,
   },
 });
 
-export const { set, clear } = pageSlice.actions;
+export const { set, first, clear } = pageSlice.actions;
 
 export const selectPage = (state) => state.page;
 
