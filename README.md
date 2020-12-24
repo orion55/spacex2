@@ -5,7 +5,7 @@
 Есть API предоставляющее данные о запусках SpaceX: https://api.spacexdata.com/v3/launches (все данные).
 Необходимо вывести список всех запусков в следующем виде:
 
-![alt text](https://cdn.lifehacker.ru/wp-content/uploads/2017/10/Screen-Shot-2017-10-02-at-20.53.54_1506966860.jpg)
+![image](https://github.com/orion55/spacex2/blob/main/assets/1.png?raw=true)
 
 ## Возможности программы
 
